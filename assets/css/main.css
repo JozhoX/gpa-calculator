@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
+body {
+    background-color: #303E73;
+    /*font-family: 'Inter', sans-serif;*/
+    font-family: 'Mali', cursive;
+}
+
+#background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -69;
+}
+
+.custom-nav {
+    background-color: rgba(23, 37, 87, 1.0);
+}
+
+.vertical-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+
+}
+
+.content-frame {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 25px;
+    border-radius: 12px; /* border curve */
+    margin-bottom: 40px;
+    min-width: 200px;
+}
+
+table * {
+    padding: 10px;
+    border: 2px solid #000000;
+}
