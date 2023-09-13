@@ -1,28 +1,31 @@
-$("#form").submit(function(e) {
-    e.preventDefault();
-});
+function preventFormSubmission(formId) {
+    $(formId).submit(function (e) {
+        e.preventDefault();
+    });
+}
 
-$("#management-form").submit(function(e) {
-    e.preventDefault();
-});
+// Apply
+preventFormSubmission("#form");
+preventFormSubmission("#management-form");
 
 function GetGrade(score) {
-    if (score <= 49) {
-        return "0";
-    } else if (score >= 50 && score <= 54) {
-        return "1";
-    } else if (score >= 55 && score <= 59) {
-        return "1.5";
-    } else if (score >= 60 && score <= 64) {
-        return "2";
-    } else if (score >= 65 && score <= 69) {
-        return "2.5";
-    } else if (score >= 70 && score <= 74) {
-        return "3";
-    } else if (score >= 75 && score <= 79) {
-        return "3.5";
-    } else if (score >= 80) {
-        return "4";
+    switch (true) {
+        case score <= 49:
+            return "0";
+        case score <= 54:
+            return "1";
+        case score <= 59:
+            return "1.5";
+        case score <= 64:
+            return "2";
+        case score <= 69:
+            return "2.5";
+        case score <= 74:
+            return "3";
+        case score <= 79:
+            return "3.5";
+        default:
+            return "4";
     }
 }
 
@@ -50,11 +53,17 @@ async function AppendSubject() {
     var subjectGrade = row.insertCell(4);
     subjectIndex.setAttribute("id", "subject-index-" + subjectCount);
     subjectIndex.className += "index";
-    subjectIndex = subjectIndex.innerHTML = subjectCount;
+    
+    subjectIndex.text(subjectCount);
+    subjectName.text($("#subject").val());
+    subjectScore.text($("#score").val());
+    subjectCredit.text($("#credit").val());
+    subjectGrade.text(GetGrade($("#score").val()));
+    /*subjectIndex = subjectIndex.innerHTML = subjectCount;
     subjectName = subjectName.innerHTML = document.getElementById("subject").value;
     subjectScore = subjectScore.innerHTML = document.getElementById("score").value;
     subjectCredit = subjectCredit.innerHTML = document.getElementById("credit").value;
-    subjectGrade = subjectGrade.innerHTML = GetGrade(document.getElementById("score").value);
+    subjectGrade = subjectGrade.innerHTML = GetGrade(document.getElementById("score").value);*/
 
     creditList.push(subjectCredit);
     gradeList.push(subjectGrade);
