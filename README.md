@@ -6,8 +6,9 @@ Demo: https://inshallah.cc/gpa-cal/
 - Calculate cumulative GPA.
 - User-friendly interface.
 - Export your GPA calculations to XLSX or CSV format.
+- Immersive visuals created with Vanta.js.
 
-💻 Languaged Used:
+💻 Written In:
 - HTML, CSS, and JavaScript.
 
 <h2>Preview</h2>
