@@ -9,7 +9,6 @@ Demo: https://inshallah.cc/gpa-cal/
 
 💻 Languaged Used:
 - HTML, CSS, and JavaScript.
-- Plesk for hosting.
 
 <h2>Preview</h2>
 
