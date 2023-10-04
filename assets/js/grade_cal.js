@@ -53,17 +53,11 @@ async function AppendSubject() {
     var subjectGrade = row.insertCell(4);
     subjectIndex.setAttribute("id", "subject-index-" + subjectCount);
     subjectIndex.className += "index";
-    
-    subjectIndex.text(subjectCount);
-    subjectName.text($("#subject").val());
-    subjectScore.text($("#score").val());
-    subjectCredit.text($("#credit").val());
-    subjectGrade.text(GetGrade($("#score").val()));
-    /*subjectIndex = subjectIndex.innerHTML = subjectCount;
+    subjectIndex = subjectIndex.innerHTML = subjectCount;
     subjectName = subjectName.innerHTML = document.getElementById("subject").value;
     subjectScore = subjectScore.innerHTML = document.getElementById("score").value;
     subjectCredit = subjectCredit.innerHTML = document.getElementById("credit").value;
-    subjectGrade = subjectGrade.innerHTML = GetGrade(document.getElementById("score").value);*/
+    subjectGrade = subjectGrade.innerHTML = GetGrade(document.getElementById("score").value);
 
     creditList.push(subjectCredit);
     gradeList.push(subjectGrade);
@@ -247,7 +241,7 @@ function removeItemOnce(arr, value) {
 function ShowFormula() {
     Swal.fire({
         title: 'สูตรการคำนวณหาเกรดเฉลี่ย',
-        text: 'นำเกรดที่ได้ของแต่ละวิชามาคูณกับหน่วยกิตของวิชานั้นๆ แล้วนำมาบวกกันให้หมด จากนั้นหารด้วยผลรวมของหน่วยกิตทั้งหมด เช่น (วิชาคณิตได้เกรด 3.0 x หน่วยกิตวิชาคณิต 2.0) + (วิชาภาษาไทยได้เกรด 3.5 x หน่วยกิตวิชาภาษาไทย 1.0) + (วิชาสังคมได้เกรด 4.0 x หน่วยกิตวิชาสังคม 1.5) รวมกันได้ (3 x 2) + (3.5 x 1) + (4 x 1.5)  =  6 + 3.5 + 6  =  15.5 แล้วหารด้วยจำนวนหน่วยกิตทั้งหมด 15.5 / (2 + 1 + 1.5)  =  15.5/4.5 ดังนั้นหน่วยกิตที่ได้จากตัวอย่างนี้คือ 3.44',
+        text: 'นำเกรดที่ได้ของแต่ละวิชามาคูณกับหน่วยกิตของวิชานั้นๆ แล้วนำมาบวกกันให้หมด จากนั้นหารด้วยผลรวมของหน่วยกิตทั้งหมด เช่น (วิชาคณิตได้เกรด 3.0 x หน่วยกิตวิชาคณิต 2.0) + (วิชาภาษาไทยได้เกรด 3.5 x หน่วยกิตวิชาภาษาไทย 1.0) + (วิชาสังคมได้เกรด 4.0 x หน่วยกิตวิชาสังคม 1.5) รวมกันได้ (3 x 2) + (3.5 x 1) + (4 x 1.5)  =  6 + 3.5 + 6  =  15.5 แล้วหารด้วยจำนวนหน่วยกิตทั้งหมด 15.5 / (2 + 1 + 1.5)  =  15.5/4.5 ดังนั้นหน่วยกิตที่ได้จากตัวอย่างนี้คือ 3.44 (ข้อมูลจาก https://cal.postjung.com/gpa)',
         icon: 'question',
         toast: true,
         confirmButtonText: 'ปิด',
