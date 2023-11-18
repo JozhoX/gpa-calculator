@@ -1,6 +1,6 @@
 # GPA Calculator
-Demo: https://inshallah.cc/gpa-cal/
-Demo (Alt): https://app.jozho.space/gpa
+[Demo](https://cdn.jozho.space/web-archive/gpa-calculator/)
+[Demo (Alt)](https://app.jozho.space/gpa)
 
 📚 Features:
 - Calculate GPA for multiple courses.
