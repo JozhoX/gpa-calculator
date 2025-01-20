@@ -3,9 +3,7 @@
 📚 Features:
 - Calculate GPA for multiple courses.
 - Calculate cumulative GPA.
-- User-friendly interface.
 - Export your GPA calculations to XLSX or CSV format.
-- Immersive visuals created with Vanta.js.
 
 💻 Written In:
 - HTML, CSS, and JavaScript.
